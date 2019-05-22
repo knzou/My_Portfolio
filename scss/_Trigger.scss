@@ -31,3 +31,26 @@ $background-opacity: 0.9;
       }
 	}
 }
+
+// Media Query Mixins  - you can use mixin elsewhere to fill in the content.
+
+@mixin mediaSm {
+	@Media screen and (max-width: 500px){
+		@content;
+	}
+}
+@mixin mediaMd {
+	@Media screen and (max-width: 768px){
+		@content;
+	}
+}
+@mixin mediaLg {
+	@Media screen and (min-width: 769px) and (max-width: 1170px){
+		@content;
+	}
+}
+@mixin mediaXL {
+	@Media screen and (min-width: 1171px){
+		@content;
+	}
+}
